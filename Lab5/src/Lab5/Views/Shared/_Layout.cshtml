@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" , initial-scale=1 />
+    <environment names="Development">
+
+        <link href="~/css/StyleSheet.css" rel="stylesheet" />
+        <!-- Custom styles for this template -->
+        <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    </environment>
+
+    @section Styles {
+    }
+
+
+</head>
+<body>
+    <div style="width: 1000px; margin-left: auto; margin-right: auto;">
+        <h1>Lab 5, File Uploads</h1>
+    </div>
+    <hr />
+    <div style="width: 1000px; margin-left: auto; margin-right: auto;">
+        <a href="/">Home</a> | <a href="~/Questions.html">Questions for Lab 5</a>
+    </div>
+    <hr />
+    <div style="width: 1000px; margin-left: auto; margin-right: auto;">
+
+        <div>
+            @RenderBody()
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <hr/>
+    <footer style="width: 1000px; margin-left: auto; margin-right: auto; font-weight: bold;">
+        By Seyedamin SeyedMahmoudian &copy; <script>document.write(new Date().getFullYear())</script>
+    </footer>
+
+</body>
+
+</html>

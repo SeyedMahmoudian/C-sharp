@@ -1,0 +1,8 @@
+/Users/Amin/MEGA/MEGAsync/College/5Semester/Net/program/Lab1/Lab1/obj/Debug/.NETFramework,Version=v4.5.2.AssemblyAttribute.cs
+/Users/Amin/MEGA/MEGAsync/College/5Semester/Net/program/Lab1/Lab1/bin/Debug/Lab1.exe.config
+/Users/Amin/MEGA/MEGAsync/College/5Semester/Net/program/Lab1/Lab1/bin/Debug/Lab1.exe.mdb
+/Users/Amin/MEGA/MEGAsync/College/5Semester/Net/program/Lab1/Lab1/bin/Debug/Lab1.pdb
+/Users/Amin/MEGA/MEGAsync/College/5Semester/Net/program/Lab1/Lab1/bin/Debug/Lab1.exe
+/Users/Amin/MEGA/MEGAsync/College/5Semester/Net/program/Lab1/Lab1/obj/Debug/Lab1.exe
+/Users/Amin/MEGA/MEGAsync/College/5Semester/Net/program/Lab1/Lab1/obj/Debug/Lab1.exe.mdb
+/Users/Amin/MEGA/MEGAsync/College/5Semester/Net/program/Lab1/Lab1/obj/Debug/Lab1.pdb

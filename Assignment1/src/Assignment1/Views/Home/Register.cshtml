@@ -1,0 +1,36 @@
+﻿@model Assignment1.Models.User
+@{
+    Layout = "_Layout";
+}
+<form asp-controller="Home" asp-action="CreateUser">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="form-group">
+        <label for="FirstName">First Name</label>
+        <input required="required" class="form-control" id="FirstName" placeholder="First Name" asp-for="FirstName" />
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input required="required" class="form-control" id="Lastname" placeholder="Last Name" asp-for="LastName" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" required="required" class="form-control" placeholder="example@example.com" id="EmailAddress" asp-for="EmailAddress" />
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" required="required" class="form-control" placeholder="Password" id="Password" asp-for="Password" />
+    </div>
+    <div class="form-group">
+        <label>User Role(1 General User 2 Blog Poster)</label>
+        <input type="number" required="required" asp-for="RoleId" min="1" max="2" />
+    </div>
+  
+    <button type="submit" class="btn btn-primary btn-lg btn-block" value="Register">Register</button>
+
+</form>
+

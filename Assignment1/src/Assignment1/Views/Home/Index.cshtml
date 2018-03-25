@@ -1,0 +1,63 @@
+﻿@using Microsoft.AspNetCore.Http;
+@model IEnumerable<Assignment1.Models.BlogPost>
+
+@{
+    Layout = "_Layout";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="container jumbotron">
+    <div class="jumbotron">
+        <h1 class="text-capitalize text-center page-header text-uppercase">Blog Engine</h1>
+    </div>
+
+</div>
+<p style="background-color:powderblue; text-decoration-style:wavy">Welcome @Context.Session.GetString("FirstName")</p>
+
+<hr class="divider" />
+<div class="row">
+    <div class="col-md-1">
+
+        @if (Model == null || Model.Count() == 0)
+            {
+            <h4>no blog to display...:( )</h4>
+
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+
+                //<h4 class="h4">@item.Title</h4>
+
+                @if (@Context.Session.GetInt32("RoleId") == 1)
+                {
+                  
+                    <h6 class="h6"><a asp-controller="Home" asp-action="EditBlogPost" asp-route-id="@item.BlogPostId">Edit This entry</a></h6>
+
+
+                }
+
+                <h4 class="h4"><a asp-controller="Home" asp-action="DisplayFullBlogPost" asp-route-id="@item.BlogPostId">@item.Title</a></h4>
+
+                <p class="lead">@{string str = new string(item.Content.Take(100).ToArray());}</p>
+                <h6 class="h6"><span class="text-muted">@item.Posted</span></h6>
+
+
+                <hr class="divider" />
+                    }
+
+                    }
+    </div>
+</div>
+<footer>
+       <a asp-controller="Home" asp-action="Logout">LogOut</a>
+</footer>
+<br />
+<br />
+<br />
+<br />
+

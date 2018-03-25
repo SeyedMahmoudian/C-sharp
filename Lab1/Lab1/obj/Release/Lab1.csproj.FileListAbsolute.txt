@@ -1,0 +1,6 @@
+/Users/amin/MEGA/College/5Semester/Net/program/Lab1/Lab1/bin/Release/Lab1.exe.config
+/Users/amin/MEGA/College/5Semester/Net/program/Lab1/Lab1/bin/Release/Lab1.exe
+/Users/amin/MEGA/College/5Semester/Net/program/Lab1/Lab1/bin/Release/Lab1.pdb
+/Users/amin/MEGA/College/5Semester/Net/program/Lab1/Lab1/obj/Release/Lab1.csproj.CoreCompileInputs.cache
+/Users/amin/MEGA/College/5Semester/Net/program/Lab1/Lab1/obj/Release/Lab1.exe
+/Users/amin/MEGA/College/5Semester/Net/program/Lab1/Lab1/obj/Release/Lab1.pdb

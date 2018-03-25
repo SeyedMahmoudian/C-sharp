@@ -1,0 +1,59 @@
+﻿@model IntroToWebApps.Core.Models.Person
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>About Me</h1>
+<table>
+    <tr>
+        <td>
+            First Name: Seyedamin
+        </td>
+    </tr>
+    <tr>
+        <td>Last Name: SeyedMahmoudian</td>
+    </tr>
+    <tr>
+        <td>Student Number : 040813340</td>
+    </tr>
+    <tr>
+        <td>Email: seye0005@algonquinlive.com</td>
+    </tr>
+    <tr>
+        <td>About Me: 5th semester Computer Science student at algonquin College</td>
+    </tr>
+    <tr>
+        <td>
+            Expectation from this course:
+            I expect to learn C# during this course and by end of the course have
+            a good understanding basics of C#
+        </td>
+    </tr>
+</table>
+<h1>Answers</h1>
+<ol type="a">
+    <li>C# is a strongly or loosely typed language? <b>Strong typing</b></li>
+    <li>What is a ‘Property’ in C# as it relates to classes and objects <b>A property is a member that provides a flexible mechanism to read, write, or compute the value of a private field</b></li>
+    <li>Describe the MVC design pattern <b>Model, view and control, a way of developing a program to devide different part of the application </b></li>
+    <li>Compare ASP.NET WebForms to ASP.NET MVC <b>MVC is slimmed version of webforms and it has become more usefull in recent years due to advancement of mobile devices</b></li>
+    <li>What is .NET Core?<b>A MVC framework it is relied on .NET and it is open source</b></li>
+    <li>
+        Open the Person object in the Models Folder. The properties FirstName and LastName have square brackets above them. These statements have a name, what is it? What do these brackets do?<br>
+        <b>
+            Require and StringLength , it will specify that name is required and it must be in certan length
+            Attribute of variable .
+        </b>
+    </li>
+    <li>Where do we store ‘static’ content in an MVC application?<b> Web server</b></li>
+    <li>Describe the purpose of the Program.cs class in this project<b>Start the program by creating new  WebHostBuilder</b></li>
+    <li>Describe the purpose of the Startup.cs class in this project.<b>pipe the HTTP request</b></li>
+    <li>MVC Core applications can ‘host’ themselves: true of false? <b>true</b></li>
+    <li>Name the language used to programmatically render HTML in MVC applications.<b> Razor</b></li>
+
+
+</ol>
+@if (Model != null)
+{
+    @(Model.FirstName + " " + Model.LastName)
+}

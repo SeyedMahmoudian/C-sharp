@@ -1,0 +1,54 @@
+﻿@model Lab4.Models.Movie
+@{
+}
+
+<form action="/Home/ModifyMovie" method="post">
+    <input type="hidden" value="@Model.MovieId" name="MovieId" />
+
+    <table>
+        <tr>
+            <td>
+                <label for="Title">Title</label>
+            </td>
+            <td>
+                <input type="text" data-val="true" data-val-length="The field Title must be a string with a maximum length of 1000." data-val-length-max="1000" data-val-required="The Title field is required." id="Title" name="Title" placeholder="@Model.Title"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="SubTitle">SubTitle</label>
+            </td>
+            <td>
+                <input type="text" data-val="true" data-val-length="The field SubTitle must be a string with a maximum length of 1000." data-val-length-max="1000" data-val-required="The SubTitle field is required." id="SubTitle" name="SubTitle" placeholder="@Model.SubTitle"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Description">Description</label>
+            </td>
+            <td>
+                <input type="text" data-val="true" data-val-length="The field Description must be a string with a maximum length of 1000." data-val-length-max="1000" data-val-required="The Description field is required." id="Description" name="Description"  placeholder="@Model.Description"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Year">Year</label>
+            </td>
+            <td>
+                <input type="date" data-val="true" data-val-required="The Year field is required." id="Year" name="Year"  placeholder="@Model.Year" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Rating">Rating</label>
+            </td>
+            <td>
+                <input type="number" data-val="true" data-val-range="The field Rating must be between 1 and 5." data-val-range-max="5" data-val-range-min="1" data-val-required="The Rating field is required." id="Rating" name="Rating" placeholder="@Model.Rating" />
+
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <input type="submit" value="Add Movie" />
+</form>

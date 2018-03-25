@@ -1,0 +1,80 @@
+﻿@model Assignment2.Models.BlogPosts
+@{
+    Layout = "_Layout";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="well-lg" style="font-family:Calibri; font-size:24px;">
+
+                <h1>@Model.Title</h1>
+                @if (ViewData["RoleId"] != null && ViewData["RoleId"].Equals(2))
+                {
+                    <a asp-controller="Home" asp-action="EditBlogPost" asp-route-id="@Model.BlogPostId">Edit Blog</a>
+                }
+                <h6>Author: @ViewData["userName"]</h6>
+                <h6>Contact Author: @ViewData["emailAddress"]</h6>
+                <h6>Posted on: @Model.Posted</h6>
+                <br />
+                <p>@Model.Content</p>
+                <div class="row">
+
+                    @{
+                        foreach (var item in Model.photos)
+                        {
+                            <div class="col-md-6">
+                                <div class="thumbnail">
+                                    <a href="@item.Url" target="_blank">
+                                        <img src="@item.Url" alt="Lights" style="width:100%">
+                                        <div class="caption">
+                                            @item.FileName.Split('.')[0]
+                                        </div>
+
+                                    </a>
+                                </div>
+                            </div>
+
+                        }
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h4>Comments</h4>
+
+            @foreach (var item in (IEnumerable<Assignment2.Models.Comments>)ViewData["comments"])
+            {
+                <ul class="list-group-item">
+                    @item.Content
+                </ul>
+
+            }
+
+        </div>
+    </div>
+</div>
+<br />
+
+<div class="container marketing">
+    <div class="jumbotron ">
+
+            <form asp-controller="Home" asp-action="AddComment" asp-route-id="@Model.BlogPostId">
+                <input type="hidden" value="@ViewData["UserId"]" name="UserId" />
+                <input name="Content" type="text" class="form-control" placeholder="Content" required maxlength="2048" />
+                <button class="btn btn-default" type="submit" value="AddComment">Post</button>
+            </form>
+</div>
+</div>
+
+

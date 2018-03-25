@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Lab6.Models.Tweet>
+
+@{
+   
+}
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" , initial-scale=1 />
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <!-- Custom styles for this template -->
+
+    </environment>
+
+    @section Styles {
+    }
+
+</head>
+<p>
+    The description of this web api is located at:
+    <a href="https://cst8359lab6api.azurewebsites.net/swagger/ui/index.html" target="_blank">https://cst8359lab6api.azurewebsites.net/swagger/ui/index.html</a>
+</p>
+
+<div class="container">
+    <form asp-controller="Home" asp-action="PostTweet">
+        <div class="form-control">
+            <label>Usermame</label>
+            <input type="text" name="username" class="form-control" />
+        </div>
+        <div class="form-control">
+            <label>Content</label>
+            <input type="text" name="content" class="form-control" />
+        </div>
+        <button class="button" type="submit" value="PostTweet">Post Tweet</button>
+    </form>
+</div>
+
+
+    @if (Model == null || Model.Count() == 0)
+    {
+        <p>There are no tweets to display.</p>
+    }
+    else
+    {
+        @foreach (var item in Model)
+        {
+            <p>Content: @item.Content<br />By: @item.Username<br />TweetId: @item.TweetId</p>
+        }
+    }

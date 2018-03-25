@@ -1,0 +1,9 @@
+﻿@model Lab4.Models.Movie
+@{
+   
+}
+
+<form asp-controller="Home" asp-action="Delete Movie">
+    <input type="hidden" value="@Model.MovieId" name="MovieId" />
+    <input type="submit" value="Delete Movie" />
+</form>

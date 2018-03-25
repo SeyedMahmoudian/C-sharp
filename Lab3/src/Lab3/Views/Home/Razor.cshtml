@@ -1,0 +1,43 @@
+﻿@{
+   Layout = "_Layout";
+    var i = 0;
+
+}
+<h3>Table</h3>
+<table style="width:100%";border-spacing: 0;">
+
+        @for (i = 1; i <= 40; i++)
+        {
+            <td style="border:solid 1px black;height:50px;">@i</td>
+            @if (i % 10 == 0)
+            {
+                <tr></tr>
+            }
+
+        }   
+</table>
+<h3>99 Bottles of Beer</h3>
+@{ 
+    var z=0;
+    var j = 0;
+    var l = -1;
+    var q = 99;
+    for(z=99;z>=1;z=z-1)
+    {
+        q--;
+        <p>@z bottles of beer on the wall,@z bottles of beer. You take one down, you pass it around, @q </p>
+        j++;
+        
+        if (j == 20)
+        {
+            <p>‘WOOO!’</p>
+            j = 0;
+        }
+        l++;
+        if (l == 50)
+        {
+            <p>awwww :(</p>
+            l = 0;
+        }
+    }
+}
