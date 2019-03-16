@@ -1,3 +1,4 @@
+# Blog Engine Expanded
 1.	_Layout.cshtml
 *	Your layout file will have a link to both a ‘Register’ view and a ‘Login’ view.
 *	If the user is logged in display their First and Last name on the page somewhere.
