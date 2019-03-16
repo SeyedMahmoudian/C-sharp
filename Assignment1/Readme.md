@@ -1,5 +1,5 @@
 # Blog Engine
-ASP.NET COre Web Application contain Home, Views, Model.
+ASP.NET Core Web Application contain Home, Views, Model.
 
 ### Model:
 1.Role
